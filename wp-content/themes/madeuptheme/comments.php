@@ -1,4 +1,5 @@
-<?php  /*Si il y a des commentaires */ if($comments): ?>
+<?php  /*Si il y a des commentaires */
+if($comments): ?>
     <h3>  <?php  comments_number('Pas de commentaire','Commentaire :', '% commentaires') ?></h3>
     <ol>
         <?php foreach($comments as $comment) :   ?>
@@ -12,3 +13,4 @@
 
 
 <?php endif; ?>
+<?php include(TEMPLATEPATH.'/form_comment.php'); ?>
