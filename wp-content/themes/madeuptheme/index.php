@@ -6,9 +6,9 @@
         <article>
             <h2><?php the_title(); ?></h2>
             <p><?php the_content(); ?></p>
-            <p>Article écrit par <?php the_author(); ?> en date de <?php the_date(''); ?></p>
-            <a href="<?php the_permalink(); ?>" class="more">Lire la suite</a>
-            <p><?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires'); ?></p>
+            <p> &copy; <?php the_author(); ?>, <?php the_date(''); ?></p>
+            <a href="<?php the_permalink(); ?>" class="more">Дальше</a>
+            <p><?php comments_popup_link('Нет комментариев', '1 комментарий', 'комментариев: %'); ?></p>
             <?php if(has_post_thumbnail()) { ?>
                 <p><?php the_post_thumbnail('thumbnail'); ?></p>
             <?php } ?>
@@ -16,8 +16,8 @@
     <?php endwhile; ?>
     <!-- instruction pour la pagination-->
     <ul id="pagination">
-        <li><?php previous_posts_link('page précédente'); ?></li>
-        <li><?php next_posts_link('page suivante'); ?></li>
+        <li><?php previous_posts_link('назад'); ?></li>
+        <li><?php next_posts_link('вперед'); ?></li>
     </ul>
 </section>
 
